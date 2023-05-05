@@ -1,20 +1,25 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Card from "./Card.js";
 
 function App() {
   const [ images, setImages ] = useState([
-    { url: "http://source.unsplash.com/random/1" },
-    { url: "http://source.unsplash.com/random/2" },
-    { url: "http://source.unsplash.com/random/3" },
-    { url: "http://source.unsplash.com/random/4" },
-    { url: "http://source.unsplash.com/random/5" },
-    { url: "http://source.unsplash.com/random/6" }
+    { url: "http://source.unsplash.com/featured/1" },
+    { url: "http://source.unsplash.com/featured/2" },
+    { url: "http://source.unsplash.com/featured/3" },
+    { url: "http://source.unsplash.com/featured/4" },
+    { url: "http://source.unsplash.com/featured/5" },
+    { url: "http://source.unsplash.com/featured/6" }
   ]);
+  //images is our getter, store initial value which is 6 images
+  // setImages is our setter, can manipulate our state
+  // use setter to add or remove an image
 
   const getNewImages = () => {
+    // set state to previous using spread operator
+    // add new image ending with random number
     setImages([...images, 
       {
-        url: `http://source.unsplash.com/random/${Math.floor(Math.random() * 100)}`,
+        url: `http://source.unsplash.com/featured/${Math.floor(Math.random() * 100)}`,
       },
     ]);
   };
