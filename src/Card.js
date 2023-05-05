@@ -2,13 +2,13 @@ const Card = ({ images }) => {
   return (
     // no functionality, no state here
     <>
-      {images.map((img, i) => {
-        <div  
-          className="card" 
-          key={i} 
-          style={{ background: `url("${img.url}") no-repeat center/cover` }}
-          ></div>
-      })}
+      {images.map((img, i) => (
+          <div  
+            className="card" 
+            key={i} 
+            style={{ background: `url("${img.url}") no-repeat center/cover` }}
+            ></div>
+      ))}
     </>
   );
 };
